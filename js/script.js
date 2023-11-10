@@ -2,13 +2,14 @@ const numeroChilometri = parseInt(prompt("quanti chilometri vuoi percorrere"));
 const etàPasseggero = parseInt(prompt("qunati anni hai"))
 
 
-let prezzoTotaleBiglietto= (0,21 * numeroChilometri);
-
+let TotaleBiglietto = (0.21 * numeroChilometri);
+let sconto;
 if (etàPasseggero > 18)
 {
-    ((prezzoTotaleBiglietto*40)/100)
-} else (etàPasseggero<18)
+   sconto = ((TotaleBiglietto*40)/100)
+} else (etàPasseggero < 18)
 {
-    ((prezzoTotaleBiglietto*20)/100)
+    sconto = ((TotaleBiglietto * 20)/100)
 }
-
+let prezzoTotaleBiglietto = TotaleBiglietto - sconto;
+document.getElementById("input").innerHTML = "il prezzo è" + prezzoTotaleBiglietto;
