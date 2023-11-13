@@ -14,4 +14,4 @@ if (etàPasseggero > 18)
 let prezzoTotaleBiglietto = TotaleBiglietto - sconto;
 
 console.log(prezzoTotaleBiglietto.toFixed(2))
-document.getElementById("input").innerHTML = "il prezzo è" + prezzoTotaleBiglietto;
+document.getElementById("input").innerHTML = `il prezzo totale del biglietto è: ${prezzoTotaleBiglietto.toFixed(2)}`
